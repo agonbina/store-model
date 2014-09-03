@@ -5,7 +5,7 @@
   "scripts": [
     "index.js",
     "lib/model.js",
-    "lib/create.js"
+    "lib/plugin.js"
   ],
   "main": "index.js",
   "repo": "git@github.com:agonbina/store-model",

@@ -39,14 +39,19 @@ describe('Model', function () {
 
         describe('.create', function () {
 
-            it('should create an instance of Store', function () {
-                var user = User.create({ id: 'agonbina' });
+            var Human = new Model({ id: 'Human' }, { url: '/humans' });
+            var user = Human.create({ id: 'agonbina' });
 
+            it('should create an instance of Store', function () {
                 expect(user.has('id')).to.be.true;
                 expect(user.get('id')).to.equal('agonbina');
             });
 
-        })
+            it('should add a computed property to automatically update the models {href} value', function () {
+                expect(user.has('href')).to.be.true;
+                expect(user.get('href')).to.equal('/humans/agonbina');
+            });
+        });
 
     });
 
