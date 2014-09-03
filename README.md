@@ -1,4 +1,4 @@
-[ ![Codeship Status for agonbina/store-model](https://www.codeship.io/projects/a9756730-139c-0132-72d3-2aacea43c16d/status?branch=master)](https://www.codeship.io/projects/33335)
+[ ![Codeship Status for agonbina/store-model](https://www.codeship.io/projects/2e8696c0-15f2-0132-c4e7-72c6c37b1f6e/status)](https://www.codeship.io/projects/33774)
 
 # store-model
 
