@@ -4,7 +4,8 @@
   "description": "A Model interface on top of [datastore](https://github.com/bredele/datastore/).",
   "scripts": [
     "index.js",
-    "lib/model.js"
+    "lib/model.js",
+    "lib/create.js"
   ],
   "main": "index.js",
   "repo": "git@github.com:agonbina/store-model",

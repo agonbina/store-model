@@ -7,7 +7,6 @@ A Model interface on top of [datastore](https://github.com/bredele/datastore/).
 ```
 var Model = require('store-model');
 
-// Create a new Model type
 var schema = { 
  id: 'User', 
  properties: {
@@ -17,6 +16,7 @@ var schema = {
 }
 var options = { url: '/users' };
 
+// Create a new Model type
 var User = new Model(schema, options);
 ```
 #### .create()

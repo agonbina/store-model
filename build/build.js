@@ -1094,12 +1094,25 @@ module.exports = require("store-model/lib/model.js");
 
 require.register("store-model/lib/model.js", function (exports, module) {
 
-var Model = function (schema) {
+var Model = function (schema, options) {
 
+};
+
+Model.prototype = {
+  create: require("store-model/lib/create.js")
 };
 
 module.exports = Model;
 
+});
+
+require.register("store-model/lib/create.js", function (exports, module) {
+
+var Store = require("bredele~datastore@1.0.6");
+
+module.exports = function () {
+
+};
 });
 
 require("store-model")

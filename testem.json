@@ -5,8 +5,6 @@
         "node_modules/sinon/pkg/sinon-ie.js",
         "node_modules/sinon/pkg/sinon-server-1.10.3.js",
         "node_modules/sinon/pkg/sinon-timers-ie-1.10.3.js",
-			
-		"build/build.js",
 
         "test/setup.js",
 		
@@ -21,8 +19,6 @@
         }
     },
     "launch_in_dev": [
-        "node",
-		"chrome"
-    ],
-	"before_tests": "component build"
+        "node"
+    ]
 }
