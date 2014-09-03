@@ -1,3 +1,5 @@
+[ ![Codeship Status for agonbina/store-model](https://www.codeship.io/projects/a9756730-139c-0132-72d3-2aacea43c16d/status?branch=master)](https://www.codeship.io/projects/33335)
+
 # store-model
 
 A Model interface on top of [datastore](https://github.com/bredele/datastore/).
