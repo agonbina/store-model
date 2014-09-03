@@ -1,0 +1,28 @@
+{
+    "framework": "mocha+chai",
+    "src_files": [
+        "node_modules/sinon/pkg/sinon.js",
+        "node_modules/sinon/pkg/sinon-ie.js",
+        "node_modules/sinon/pkg/sinon-server-1.10.3.js",
+        "node_modules/sinon/pkg/sinon-timers-ie-1.10.3.js",
+			
+		"build/build.js",
+
+        "test/setup.js",
+		
+        "index.js",
+        "lib/*.js",
+		"test/*.test.js"
+    ],
+    "launchers": {
+        "node": {
+            "command": "./node_modules/.bin/mocha -r test/setup.js -R tap test/*.test.js",
+            "protocol": "tap"
+        }
+    },
+    "launch_in_dev": [
+        "node",
+		"chrome"
+    ],
+	"before_tests": "component build"
+}

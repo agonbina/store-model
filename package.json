@@ -1,0 +1,21 @@
+{
+  "name": "store-model",
+  "version": "0.0.1",
+  "description": "A Model interface on top of [datastore](https://github.com/bredele/datastore/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/testem"
+  },
+  "repository": {
+    "url": "git@github.com:agonbina/store-model.git",
+    "type": "git"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3"
+  },
+  "dependencies": {
+    "datastore": "^1.0.6"
+  }
+}

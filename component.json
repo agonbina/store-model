@@ -1,0 +1,15 @@
+{
+  "name": "store-model",
+  "version": "0.0.1",
+  "description": "A Model interface on top of [datastore](https://github.com/bredele/datastore/).",
+  "scripts": [
+    "index.js",
+    "lib/model.js"
+  ],
+  "main": "index.js",
+  "repo": "git@github.com:agonbina/store-model",
+  "dependencies": {
+    "bredele/datastore": "^1.0.6",
+    "component/assert": "~0.4.0"
+  }
+}
