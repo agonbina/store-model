@@ -23,7 +23,9 @@ A Model interface on top of [datastore](https://github.com/bredele/datastore/).
     var friend = User.create({ id: 'gonigkum' });
     agon
         .get('friends')
-        .add(friend);    // friend.get('href') => '/users/agonbina/friends/gonigkum'
+        .add(friend);    
+        
+    friend.get('href') => '/users/agonbina/friends/gonigkum'
     ```
 
 ## API
