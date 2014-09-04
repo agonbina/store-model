@@ -39,8 +39,13 @@ describe('Model', function () {
 
         describe('.create', function () {
 
-            var Human = new Model({ id: 'Human' }, { url: '/humans' });
+            var HumanSchema = { id: 'Human' };
+            var Human = new Model(HumanSchema, { url: '/humans' });
             var user = Human.create({ id: 'agonbina' });
+
+            it('should store a reference to its schema', function () {
+               expect(user.schema).to.equal(HumanSchema);
+            });
 
             it('should create an instance of Store', function () {
                 expect(user.has('id')).to.be.true;
