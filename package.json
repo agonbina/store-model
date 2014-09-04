@@ -1,6 +1,6 @@
 {
   "name": "store-model",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Model interface on top of [datastore](https://github.com/bredele/datastore/).",
   "main": "index.js",
   "scripts": {
