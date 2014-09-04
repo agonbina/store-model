@@ -20,5 +20,8 @@
     },
     "launch_in_dev": [
         "node"
+    ],
+    "launch_in_ci": [
+	"node"
     ]
 }
