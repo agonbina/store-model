@@ -4,6 +4,28 @@
 
 A Model interface on top of [datastore](https://github.com/bredele/datastore/).
 
+## Features
+- Syntactic sugar on top of 'datastore' for Models
+- Use JSON Schemas to define the model properties and validate it 
+- Supports nested Collection properties. Example:
+    ```
+    var userSchema = {id: 'User',
+        properties: {
+            id: { type: 'string' },
+            friends: {
+                type: 'array', items: { $ref: 'User' }
+            }
+        },
+        required: [ 'id' ]
+    }
+    var User = new Model(userSchema, options);
+    var agon = User.create({ id: 'agonbina' });
+    var friend = User.create({ id: 'gonigkum' });
+    agon
+        .get('friends')
+        .add(friend);    // friend.get('href') => '/users/agonbina/friends/gonigkum'
+    ```
+
 ## API
 
 ```
