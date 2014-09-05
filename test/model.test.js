@@ -30,6 +30,7 @@ describe('Model', function () {
         var Player = new Model(PlayerSchema, { url: '/players' });
 
         expect(Model.getModel(PlayerSchema.id)).to.equal(Player);
+        expect(Model.getModel(PlayerSchema.id)).to.be.instanceof(Model);
         expect(spy.calledOnce).to.be.true;
 
         Model.addModel.restore();

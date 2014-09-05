@@ -17,6 +17,7 @@
     "testem": "^0.6.18"
   },
   "dependencies": {
-    "datastore": "^1.0.6"
+    "datastore": "^1.0.6",
+    "store-collection": "^0.1.0"
   }
 }

@@ -5,12 +5,14 @@
   "scripts": [
     "index.js",
     "lib/model.js",
-    "lib/plugin.js"
+    "lib/plugin.js",
+    "lib/parser.js"
   ],
   "main": "index.js",
   "repo": "git@github.com:agonbina/store-model",
   "dependencies": {
     "bredele/datastore": "^1.0.6",
-    "component/assert": "~0.4.0"
+    "component/assert": "~0.4.0",
+    "agonbina/store-collection": "~0.1.0"
   }
 }

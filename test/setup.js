@@ -5,6 +5,7 @@ if (typeof process !== 'undefined' && process.title === 'node') {
     sinon = require('sinon');
 
 	Model = require('..');
+    Collection = require('store-collection');
 
     isBrowser = false;
 } else {
