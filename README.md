@@ -31,7 +31,7 @@ A Model interface on top of [datastore](https://github.com/bredele/datastore/).
 ## API
 
 ```
-var Model = require('store-model');
+var Model = require('store-model').Model;
 
 var schema = { 
  id: 'User', 

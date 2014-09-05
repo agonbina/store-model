@@ -31,7 +31,7 @@ describe('schema parser', function () {
         Zoo = new Model(ZooSchema, { url: '/zoos' });
     });
 
-    it('should resolve all the properties of a given schema', function () {
+    xit('should resolve all the properties of a given schema', function () {
         var result = parser(ZooSchema);
 
         expect(Model.getModel(HumanSchema.id)).to.equal(Human);
