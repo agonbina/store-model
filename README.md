@@ -55,7 +55,50 @@ user.get('age')         // 25
 user.get('href')        // '/users/agonbina'
 user.model()            // data 
 ```
+## Collection API
 
+```
+var Users = new Collection(User);
+var users = Users.create([
+    User.create({ id: 'agonbina' }),
+    User.create({ id: 'gonigkum' })
+]);
+
+users.each(function(user) {
+    console.log(user.get('id'));
+}); // 'agonbina', 'gonigkum'
+
+```
+
+### instance.add(obj:Store)
+Add a new item to the collection. The item **must** be a Store instance.
+```
+users.add(User.create({ id: 'someUsername' }));
+```
+Emits an 'add' event.
+```
+users.on('add', function(user) {
+    user.get('id'); // 'someUsername'
+});
+```
+
+### instance.remove(obj:Store)
+Remove an item from the collection.
+
+```obj``` can be a Store instance or a query filter. 
+```
+var me = User.create({ id: 'agonbina' });
+users.remove(me);
+```
+
+## instance.removeWhere(query:Mixed)
+Remove all items matching the query object.
+```
+users.removeWhere({ id: 'agonbina' }); // Remove all users with id: 'agonbina'
+```
+
+### instance.length()
+Returns the number of elements in the collection.
 
 ## Example:
 
