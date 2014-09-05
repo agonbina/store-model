@@ -3,6 +3,7 @@ var parser = require('../lib/parser');
 var HumanSchema = {
         id: 'Human',
         properties: {
+            id: { type: 'string' },
             name: { type: 'string' }
         }
     },
@@ -31,14 +32,19 @@ describe('schema parser', function () {
         Zoo = new Model(ZooSchema, { url: '/zoos' });
     });
 
-    xit('should resolve all the properties of a given schema', function () {
+    it('should resolve all the properties of a given schema', function () {
         var result = parser(ZooSchema);
 
-        expect(Model.getModel(HumanSchema.id)).to.equal(Human);
-        expect(Model.getModel(HumanSchema.id)).to.be.instanceof(Model);
         expect(result).to.be.an('object');
         expect(result.id).to.be.undefined;
-        expect(result.animals).to.be.instanceof(Collection);
+
+        expect(result.zooKeeper.schema).to.equal(HumanSchema);
+        expect(result.zooKeeper).to.be.instanceof(Store);
+        expect(result.zooKeeper.has('name')).to.be.false;
+
+        expect(result.animals).to.be.instanceof(Store);
+        expect(result.animals.length()).to.equal(0);
+        expect(result.animals).to.respondTo('add');
     });
 
 });
