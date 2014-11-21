@@ -1,3 +1,6 @@
+You should not use this as its no longer supported
+===
+
 [ ![Codeship Status for agonbina/store-model](https://www.codeship.io/projects/2e8696c0-15f2-0132-c4e7-72c6c37b1f6e/status)](https://www.codeship.io/projects/33774)
 
 # store-model
